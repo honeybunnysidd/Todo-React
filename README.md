@@ -1,6 +1,6 @@
 # Task List | Task Manager | ToDo List
 
-## A simple Todo application built with React, Vite, and Material-UI.
+## A simple Todo application built with React
 
 ## Features
 
