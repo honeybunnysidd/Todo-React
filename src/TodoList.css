@@ -1,0 +1,170 @@
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  margin: 0 auto;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.inputAndAdd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  text-indent: 6%;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.6rem 0.9rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+/* Add Task */
+.addTask {
+  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+  color: white;
+}
+
+h2 {
+  color: black;
+  font-family: cursive;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+}
+
+/* UpperCase All + Delete All */
+.upperAll,
+.deleteAll {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  color: white;
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-top: 2px solid #eee;
+  padding-left: 1.2rem;
+}
+
+li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 1.2rem;
+}
+
+li span {
+  flex: 1;
+  font-size: 1rem;
+  color: black;
+  word-break: break-word;
+}
+
+/* Buttons inside list */
+li button {
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+/* Delete button */
+li button:nth-of-type(1) {
+  background: linear-gradient(90deg, #f31313 0%, #f39877 100%);
+  color: white;
+}
+
+/* Uppercase button */
+li button:nth-of-type(2) {
+  background: linear-gradient(90deg, #9b59b6 0%, #e056fd 100%);
+  color: white;
+}
+
+/* Mark as Done/Uncomplete button */
+li button:nth-of-type(3) {
+  background: linear-gradient(90deg, #20bf6b 0%, #0fb9b1 100%);
+  color: white;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  input[type="text"] {
+    width: 100%;
+    flex: none;
+  }
+
+  .inputAndAdd {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .upperAll,
+  .deleteAll {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li button {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+  li span {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+}
